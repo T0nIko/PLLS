@@ -18,11 +18,11 @@
 <body>
         <nav class="teal accent-5">
             <div class="nav-wrapper">
-                <a href="{% url 'index' %}" class="brand-logo center">Брокер ДБО</a>
+                <a href="{% url 'index' %}" class="brand-logo center">PLLS</a>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="">Поиск</a></li>
-                    <li><a href="{% url 'index' %}">Банки</a></li>
+                    <li><a href="{% url 'index' %}"></a></li>
                     <li><a href="">Контакты</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
@@ -34,14 +34,6 @@
         </nav>
 
     <main>
-        <div class="switch right-align my-switch">
-            <label>
-                    <a id="bfl" href="">Физические Лица</a>
-                    <input name="bank-check" type="checkbox">
-                    <span class="lever"></span>
-                    <a id="bul" href="">Юридические Лица</a>
-                </label>
-        </div>
 
         {% block content %} {% endblock content %}
 
@@ -51,14 +43,14 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h5 class="white-text">Брокер ДБО</h5>
-                    <p class="grey-text text-lighten-4">Прототип приложения для проектного семинара</p>
+                    <h5 class="white-text">PLLS</h5>
+                    <p class="grey-text text-lighten-4">Прототип системы контроля знаний языков программирования</p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2017 Конфа 1
+                © 2017 Anton Kostryukov 15BI-2
             </div>
         </div>
     </footer>
