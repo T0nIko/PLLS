@@ -1,1 +1,3 @@
-print('Hello World!')
+data = 1
+print(data)
+print(data)
