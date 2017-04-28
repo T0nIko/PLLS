@@ -16,61 +16,25 @@
     <div class="nav-wrapper container">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contacts</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'LS:task' %}">Tasks</a></li>
+            <li><a href="{% url 'index' %}">About</a></li>
+            <li><a href="{% url 'index' %}">Contacts</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contacts</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'LS:task' %}">Tasks</a></li>
+            <li><a href="{% url 'index' %}">About</a></li>
+            <li><a href="{% url 'index' %}">Contacts</a></li>
         </ul>
     </div>
 </nav>
 
-<div id="index-banner" class="logo-bar">
-    <div class="section no-pad-bot">
-        <div class="container center">
-            <br>
-            <img src="{% static "images/logo.png" %}" class="img">
-            <h2 class="header center teal-text text-darken-4">YOUR <b>NAME</b></h2>
-            <div class="row center">
-                <h5 class="header col s12 light teal-text text-darken-3">Based on Materialize framework</h5>
-            </div>
-            <br><br>
-        </div>
-    </div>
-</div>
+<main>
 
+    {% block content %} {% endblock content %}
 
-<div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="icon-block">
-                    <h2 class="center"><img src="{% static "images/icon.png" %}"></h2>
-                    <h5 class="center">Lorem ipsum</h5>
-                    <p class="light">dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius
-                        purus sit amet mi sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio
-                        eget, hendrerit fringilla lorem. Nullam quis pulvinar neque. Aenean egestas ex nunc, sed
-                        malesuada ante hendrerit in. Mauris non magna et felis malesuada finibus ut et quam.</p>
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="icon-block">
-                    <h2 class="center"><img src="{% static "images/icon.png" %}"></h2>
-                    <h5 class="center">Lorem ipsum</h5>
-                    <p class="light">dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius
-                        purus sit amet mi sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio
-                        eget, hendrerit fringilla lorem. Nullam quis pulvinar neque. Aenean egestas ex nunc, sed
-                        malesuada ante hendrerit in. Mauris non magna et felis malesuada finibus ut et quam.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</main>
 
 <footer class="page-footer orange">
     <div class="container">
@@ -104,7 +68,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="">Anton Kostrukov</a>
+            Made by <a class="black-text text-lighten-2" href="">Anton Kostryukov</a> 15BI-2
         </div>
     </div>
 </footer>

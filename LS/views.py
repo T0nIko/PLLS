@@ -11,4 +11,8 @@ def index(request):
     else:
         form = EditorForm()
 
-    return render(request, 'index.html', {'editor': form})
+    return render(request, 'LS/index.html', {'editor': form})
+
+
+def task(request):
+    return render(request, 'LS/tasks.html')
