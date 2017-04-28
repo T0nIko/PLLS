@@ -1,12 +1,118 @@
-{% extends "static/s_templates/layout.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
 
-{% block content %}
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<nav class="" role="navigation">
+    <div class="nav-wrapper container">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ editor }}
-        <input type="submit" value="Submit"/>
-    </form>
+<div id="index-banner" class="logo-bar">
+    <div class="section no-pad-bot">
+        <div class="container center">
+            <br>
+            <img src="../static/images/logo.png" class="img">
+            <h2 class="header center teal-text text-darken-4">YOUR <b>NAME</b></h2>
+            <div class="row center">
+                <h5 class="header col s12 light teal-text text-darken-3">Based on Materialize framework</h5>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>
 
-{% endblock content %}
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <h2 class="center"><img src="../static/images/icon.png"></h2>
+                    <h5 class="center">Lorem ipsum</h5>
+                    <p class="light">dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius
+                        purus sit amet mi sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio
+                        eget, hendrerit fringilla lorem. Nullam quis pulvinar neque. Aenean egestas ex nunc, sed
+                        malesuada ante hendrerit in. Mauris non magna et felis malesuada finibus ut et quam.</p>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <h2 class="center"><img src="../static/images/icon.png"></h2>
+                    <h5 class="center">Lorem ipsum</h5>
+                    <p class="light">dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius
+                        purus sit amet mi sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio
+                        eget, hendrerit fringilla lorem. Nullam quis pulvinar neque. Aenean egestas ex nunc, sed
+                        malesuada ante hendrerit in. Mauris non magna et felis malesuada finibus ut et quam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12"><h5>Lorem ipsum</h5></div>
+            <div class=" col l6 s12">
+                <p>dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius purus sit amet mi
+                    sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio eget, hendrerit fringilla
+                    lorem.</p>
+            </div>
+            <div class="col l6 s12">
+                <div class="row social center">
+                    <div class="col l2 s2">
+                        <a href="https://facebook.com/anton.kostrukov"><img src="../static/assets/f.png"></a>
+                    </div>
+                    <div class="col l2 s2">
+                        <a href="http://twitter.com/#!/a_kostryukov"><img src="../static/assets/t.png"></a>
+                    </div>
+                    <div class="col l2 s2">
+                        <a href="skype:t0t0lllka?call"><img src="../static/assets/s.png"></a>
+                    </div>
+                    <div class="col l2 s2">
+                        <a href="https://github.com/T0nIko"><img src="../static/assets/gh.png"></a>
+                    </div>
+                    <div class="col l2 s2">
+                        <a href="mailto:anton97kos@gmail.com"><img src="../static/assets/g.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="">Anton Kostrukov</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../static/js/materialize.js"></script>
+<script src="../static/js/init.js"></script>
+
+</body>
+</html>
