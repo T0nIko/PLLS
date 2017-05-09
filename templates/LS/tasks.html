@@ -6,20 +6,11 @@
 <div class="container">
     <br>
     <div class="col l12 m12 s12 tasks">
-        <div class="row">
-            <div class="col l3 m3 s12 bgq">
-                <div class="name_of_quest">
-                    <p>Lorem ipsum</p>
-                </div>
-                <div class="description_of_quest">
-                    <p>dolor sit amet, consectetur adipiscing elit. Nam id lacinia odio. Praesent varius purus sit amet
-                        mi sagittis feugiat. Sed id pretium erat. Etiam velit mauris, mattis nec odio eget, hendrerit
-                        fringilla lorem.</p>
-                </div>
-            </div>
-            <div class="col l9 m9 s12">
-            </div>
-        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ editor }}
+            <input type="submit" value="Submit" />
+        </form>
     </div>
     <br>
 </div>

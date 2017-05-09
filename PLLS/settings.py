@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'LS.apps.LsConfig',
+    'django_ace',
+    'djangocodemirror',
 ]
 
 MIDDLEWARE = [
@@ -119,10 +121,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
-CODEMIRROR_PATH = r"codemirror"
-
-CODEMIRROR_MODE = 'python'
-
-CODEMIRROR_THEME = 'cobalt'
+CODEMIRROR_PATH = r"js/codemirror"

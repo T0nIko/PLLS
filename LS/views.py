@@ -3,6 +3,10 @@ from .forms import EditorForm
 
 
 def index(request):
+    return render(request, 'LS/index.html')
+
+
+def tasks(request):
     if request.method == 'POST':
         form = EditorForm(request.POST)
         if form.is_valid():
@@ -11,11 +15,7 @@ def index(request):
     else:
         form = EditorForm()
 
-    return render(request, 'LS/index.html', {'editor': form})
-
-
-def tasks(request):
-    return render(request, 'LS/tasks.html')
+    return render(request, 'LS/tasks.html', {'editor': form})
 
 
 def contacts(request):
