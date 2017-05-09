@@ -14,5 +14,13 @@ def index(request):
     return render(request, 'LS/index.html', {'editor': form})
 
 
-def task(request):
+def tasks(request):
     return render(request, 'LS/tasks.html')
+
+
+def contacts(request):
+    return render(request, 'LS/contacts.html')
+
+
+def about(request):
+    return render(request, 'LS/about.html')

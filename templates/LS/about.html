@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+  <div id="index-banner" class="logo-bar">
+      <div class="section no-pad-bot">
+        <div class="container center">
+          <br>
+              <img src="{% static "images/logo.png" %}" class="img">
+              <h2 class="header center teal-text text-darken-4">ABOUT <b>ME</b></h2>
+              <div class="row center">
+                <h5 class="header col s12 light teal-text text-darken-3">SOMETHING</h5>
+              </div>
+              <br><br>
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="icon-block">
+            <h2 class="center"><img src="{% static "images/icon.png" %}"></h2>
+            <h5 class="center">Hello, I'm Anton Kostrukov!</h5>
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non iaculis ligula, at venenatis orci. Mauris id fermentum neque. Quisque tortor nisl, placerat vel neque maximus, semper vehicula urna. Sed urna tellus, fringilla laoreet placerat at, dictum sit amet est. Phasellus luctus ex a velit lacinia pulvinar. Nullam vel dignissim magna. Suspendisse non arcu sapien. Aliquam ac suscipit quam, et laoreet massa. Nam quis eleifend velit. In efficitur sollicitudin fringilla.
+Suspendisse laoreet nunc elit, eu feugiat augue luctus id. Integer rutrum enim ut ultrices venenatis. Donec eu blandit velit. Cras eu velit consequat, interdum lacus ac, tristique metus. Suspendisse augue mauris, hendrerit id pretium at, fermentum malesuada turpis. Nunc non nunc sed leo porta lacinia sit amet ut magna. Vestibulum non euismod tortor. Integer vestibulum, metus sit amet lobortis ultricies, ipsum risus feugiat leo, et condimentum dolor neque a diam. Sed tortor justo, luctus vel quam et, condimentum semper dolor. Praesent nec ultrices metus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
