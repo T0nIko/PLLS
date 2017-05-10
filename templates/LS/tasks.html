@@ -3,16 +3,26 @@
 
 {% block content %}
 
-<div class="container">
-    <br>
-    <div class="col l12 m12 s12 tasks">
+    <link rel="stylesheet" href="{% static "js/codemirror/lib/codemirror.css" %}">
+    <script src="{% static "js/codemirror/lib/codemirror.js" %}"></script>
+    <script src="{% static "js/codemirror/addon/edit/matchbrackets.js" %}"></script>
+    <script src="{% static "js/codemirror/mode/python/python.js" %}"></script>
+    <script src="{% static "js/codemirror/mode/clike/clike.js" %}"></script>
+    <script src="{% static "js/codemirror/addon/comment/comment.js" %}"></script>
+    <script src="{% static "js/codemirror/addon/hint/anyword-hint.js" %}"></script>
+    <script src="{% static "js/codemirror/addon/selection/active-line.js" %}"></script>
+
+
+    <div class="container">
         <form method="post">
             {% csrf_token %}
-            {{ editor }}
-            <input type="submit" value="Submit" />
+            <textarea id="code" name="code">
+                {{ task_template }}
+                </textarea>
+            <input type="submit" value="Run"/>
         </form>
     </div>
-    <br>
-</div>
+
+    <script src="{% static "js/editor.js" %}"></script>
 
 {% endblock content %}

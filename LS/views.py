@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from .forms import EditorForm
 
 
 def index(request):
@@ -7,15 +6,15 @@ def index(request):
 
 
 def tasks(request):
+    res = {}
     if request.method == 'POST':
-        form = EditorForm(request.POST)
-        if form.is_valid():
-            print(form.cleaned_data['text'])
-            return redirect('/')
-    else:
-        form = EditorForm()
+        for key, val in request.POST.items():
+            if key != 'csrfmiddlewaretoken':
+                res[key] = val
 
-    return render(request, 'LS/tasks.html', {'editor': form})
+        return render(request, 'LS/tasks.html')
+
+    return render(request, 'LS/tasks.html')
 
 
 def contacts(request):
