@@ -2,6 +2,6 @@
 Prototype of learning system for various programming languages.
 
 # Based on:
-  - Django
-  - Ace
-  - Materialize
+  - **Django** (1.11)
+  - **Codemirror** (5.25.2)
+  - **Materialize**
