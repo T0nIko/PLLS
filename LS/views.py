@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+
+from .utilities import *
 
 
 def index(request):
@@ -6,12 +8,17 @@ def index(request):
 
 
 def tasks(request):
-    res = {}
+
     if request.method == 'POST':
+        res = {}
         for key, val in request.POST.items():
             if key != 'csrfmiddlewaretoken':
                 res[key] = val
 
+        # fn = create_file(res['code'], 1, 'py')
+        # out = execute_file(fn, 'py')
+        # res = check_res(out, 1)
+        print(filechecker_wrapper(res['code'], 1, 'py', 1))
         return render(request, 'LS/tasks.html')
 
     return render(request, 'LS/tasks.html')
