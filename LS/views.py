@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .utilities import *
+from .utilities import FileProcessor
 
 
 def index(request):
