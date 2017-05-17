@@ -24,10 +24,6 @@ def tasks(request):
     return render(request, 'LS/tasks.html', {'last_id': last_task_id(), 'task_list': get_task_list()})
 
 
-def task_list(request):
-    pass
-
-
 def contacts(request):
     return render(request, 'LS/contacts.html')
 

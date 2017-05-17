@@ -45,11 +45,13 @@
                     </form>
                 </div>
                 <div class="col s4 m4 l4">
-                    {% for task in task_list %}
-                        <h5 class="center light">{{ task.0 }}. {{ task.1 }}</h5>
-                        <p class="light">{{ task.2 }}</p>
-                        <hr>
-                    {% endfor %}
+                    <div class="task-list">
+                        {% for task in task_list %}
+                            <h5 class="center light">{{ task.0 }}. {{ task.1 }}</h5>
+                            <p class="light">{{ task.2 }}</p>
+                            <hr>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
