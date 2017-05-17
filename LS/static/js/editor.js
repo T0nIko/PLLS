@@ -9,6 +9,8 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     indentUnit: 4,
     matchBrackets: true
 });
+//TODO: fix editor size scaling
+editor.setSize(document.innerWidth * 0.7, 500);
 
 var pending;
 

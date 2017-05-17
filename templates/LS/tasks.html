@@ -14,14 +14,47 @@
 
 
     <div class="container">
-        <form method="post">
-            {% csrf_token %}
-            <textarea id="code" name="code">
-                {{ task_template }}
-                </textarea>
-            <input type="submit" value="Run"/>
-        </form>
+        <div class="section">
+            <div class="row">
+                <div class="col s8 m8 l8">
+                    <form method="post">
+                        {% csrf_token %}
+                        <label></label>
+                        <textarea id="code" name="code" class="te-container">
+                            {{ task_template }}
+                        </textarea>
+                        <div class="row">
+                            <div class="col s4 m3 l2">
+                                <input type="submit" value="Run"/>
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <label for="task-id-dd">Task ID:</label>
+                                <input type="number" min="1" max="{{ last_id }}" value="1" name="task-id" id="task-id">
+                            </div>
+                            <div class="col s6 m7 l8">
+                                <div class="switch">
+                                    <label>
+                                        C++
+                                        <input type="checkbox" id="mode-switch" name="switch" value="py">
+                                        <span class="lever"></span>
+                                        Python
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s4 m4 l4">
+                    {% for task in task_list %}
+                        <h5 class="center light">{{ task.0 }}. {{ task.1 }}</h5>
+                        <p class="light">{{ task.2 }}</p>
+                        <hr>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <script src="{% static "js/editor.js" %}"></script>
 
